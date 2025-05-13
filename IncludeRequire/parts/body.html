@@ -1,0 +1,12 @@
+<main>
+    <h2>News</h2>
+    <div class="articles">
+        <?php foreach ($articles as $article): ?>
+            <article>
+                <h3><?php echo $article['title']; ?></h3>
+                <p><?php echo $article['text']; ?></p>
+                <p><strong>Keywords:</strong> <?php echo implode(', ', $article['tags']); ?></p>
+            </article>
+        <?php endforeach; ?>
+    </div>
+</main>
